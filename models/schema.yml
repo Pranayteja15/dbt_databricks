@@ -37,3 +37,25 @@ models:
         data_type: decimal(10,2)
       - name: hire_date
         data_type: date
+
+  - name: employees_transformed
+    description: "Employee table with transformed data types and formats"
+    columns:
+      - name: employee_id
+        description: "Unique identifier for each employee (converted to bigint)"
+        data_type: bigint
+      - name: first_name
+        description: "First name in uppercase"
+        data_type: string
+      - name: last_name
+        description: "Last name in uppercase"
+        data_type: string
+      - name: department
+        description: "Department name in proper case"
+        data_type: string
+      - name: salary
+        description: "Salary as double precision"
+        data_type: double
+      - name: hire_date
+        description: "Hire date truncated to month"
+        data_type: date

@@ -2513,3 +2513,124 @@ FROM `spark_catalog`.`dbo`.`employees`
 [0m11:37:46.946591 [debug] [MainThread]: Command `dbt run` succeeded at 11:37:46.946524 after 23.00 seconds
 [0m11:37:46.946814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106168b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10616e090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105dc5250>]}
 [0m11:37:46.947040 [debug] [MainThread]: Flushing usage events
+[0m15:06:59.342927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10472f5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10469d590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043c5090>]}
+
+
+============================== 15:06:59.345261 | dfffb9a6-2c74-4454-848a-4fc56ca3f42c ==============================
+[0m15:06:59.345261 [info ] [MainThread]: Running with dbt=1.5.11
+[0m15:06:59.345542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/pranayteja/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/pranayteja/fivetran_transformations/fivetran_dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:07:00.078153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043952d0>]}
+[0m15:07:00.085975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043952d0>]}
+[0m15:07:00.086231 [info ] [MainThread]: Registered adapter: databricks=1.5.3
+[0m15:07:00.103176 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m15:07:00.126965 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m15:07:00.127263 [debug] [MainThread]: Partial parsing: added file: fivetran_dbt://models/employees_transformed.sql
+[0m15:07:00.127474 [debug] [MainThread]: Partial parsing: updated file: fivetran_dbt://models/schema.yml
+[0m15:07:00.140685 [debug] [MainThread]: 1699: static parser successfully parsed employees_transformed.sql
+[0m15:07:00.161253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1377c30d0>]}
+[0m15:07:00.172089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137885910>]}
+[0m15:07:00.172368 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 415 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m15:07:00.172535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10201c1d0>]}
+[0m15:07:00.173156 [info ] [MainThread]: 
+[0m15:07:00.173515 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m15:07:00.173997 [debug] [ThreadPool]: Acquiring new databricks connection 'list_hive_metastore'
+[0m15:07:00.174181 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore"
+[0m15:07:00.174299 [debug] [ThreadPool]: On list_hive_metastore: GetSchemas(database=`hive_metastore`, schema=None)
+[0m15:07:00.174405 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:07:03.028714 [debug] [ThreadPool]: SQL status: OK in 2.8499999046325684 seconds
+[0m15:07:03.035942 [debug] [ThreadPool]: On list_hive_metastore: Close
+[0m15:07:04.051287 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive_metastore, now create_hive_metastore_fivetranpocsample)
+[0m15:07:04.052859 [debug] [ThreadPool]: Creating schema "database: "hive_metastore"
+schema: "fivetranpocsample"
+"
+[0m15:07:04.067246 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m15:07:04.067609 [debug] [ThreadPool]: Using databricks connection "create_hive_metastore_fivetranpocsample"
+[0m15:07:04.067821 [debug] [ThreadPool]: On create_hive_metastore_fivetranpocsample: /* {"app": "dbt", "dbt_version": "1.5.11", "dbt_databricks_version": "1.5.3", "databricks_sql_connector_version": "2.5.2", "profile_name": "fivetran_transformations", "target_name": "dev", "connection_name": "create_hive_metastore_fivetranpocsample"} */
+create schema if not exists `hive_metastore`.`fivetranpocsample`
+  
+[0m15:07:04.068011 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:07:06.913691 [debug] [ThreadPool]: SQL status: OK in 2.8499999046325684 seconds
+[0m15:07:06.916136 [debug] [ThreadPool]: Spark adapter: NotImplemented: commit
+[0m15:07:06.916641 [debug] [ThreadPool]: On create_hive_metastore_fivetranpocsample: ROLLBACK
+[0m15:07:06.916990 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m15:07:06.917277 [debug] [ThreadPool]: On create_hive_metastore_fivetranpocsample: Close
+[0m15:07:07.842947 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_hive_metastore_fivetranpocsample, now list_hive_metastore_fivetranpocsample)
+[0m15:07:07.854089 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_fivetranpocsample"
+[0m15:07:07.854669 [debug] [ThreadPool]: On list_hive_metastore_fivetranpocsample: GetTables(database=hive_metastore, schema=fivetranpocsample, identifier=None)
+[0m15:07:07.855020 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:07:10.128755 [debug] [ThreadPool]: SQL status: OK in 2.2699999809265137 seconds
+[0m15:07:10.143587 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m15:07:10.144144 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_fivetranpocsample"
+[0m15:07:10.144462 [debug] [ThreadPool]: On list_hive_metastore_fivetranpocsample: /* {"app": "dbt", "dbt_version": "1.5.11", "dbt_databricks_version": "1.5.3", "databricks_sql_connector_version": "2.5.2", "profile_name": "fivetran_transformations", "target_name": "dev", "connection_name": "list_hive_metastore_fivetranpocsample"} */
+
+      select current_catalog()
+  
+[0m15:07:11.284774 [debug] [ThreadPool]: SQL status: OK in 1.1399999856948853 seconds
+[0m15:07:11.293821 [debug] [ThreadPool]: Using databricks connection "list_hive_metastore_fivetranpocsample"
+[0m15:07:11.294232 [debug] [ThreadPool]: On list_hive_metastore_fivetranpocsample: /* {"app": "dbt", "dbt_version": "1.5.11", "dbt_databricks_version": "1.5.3", "databricks_sql_connector_version": "2.5.2", "profile_name": "fivetran_transformations", "target_name": "dev", "connection_name": "list_hive_metastore_fivetranpocsample"} */
+show views in `hive_metastore`.`fivetranpocsample`
+  
+[0m15:07:12.553668 [debug] [ThreadPool]: SQL status: OK in 1.2599999904632568 seconds
+[0m15:07:12.559291 [debug] [ThreadPool]: On list_hive_metastore_fivetranpocsample: ROLLBACK
+[0m15:07:12.559960 [debug] [ThreadPool]: Databricks adapter: NotImplemented: rollback
+[0m15:07:12.560330 [debug] [ThreadPool]: On list_hive_metastore_fivetranpocsample: Close
+[0m15:07:13.485744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049d7610>]}
+[0m15:07:13.487057 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m15:07:13.487633 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m15:07:13.488913 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:07:13.489774 [info ] [MainThread]: 
+[0m15:07:13.496932 [debug] [Thread-1 (]: Began running node model.fivetran_dbt.employees_transformed
+[0m15:07:13.498070 [info ] [Thread-1 (]: 1 of 1 START sql view model fivetranpocsample.employees_transformed ............ [RUN]
+[0m15:07:13.499274 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hive_metastore_fivetranpocsample, now model.fivetran_dbt.employees_transformed)
+[0m15:07:13.499788 [debug] [Thread-1 (]: Began compiling node model.fivetran_dbt.employees_transformed
+[0m15:07:13.510056 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran_dbt.employees_transformed"
+[0m15:07:13.511089 [debug] [Thread-1 (]: Timing info for model.fivetran_dbt.employees_transformed (compile): 15:07:13.500019 => 15:07:13.510880
+[0m15:07:13.511369 [debug] [Thread-1 (]: Began executing node model.fivetran_dbt.employees_transformed
+[0m15:07:13.537323 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran_dbt.employees_transformed"
+[0m15:07:13.538194 [debug] [Thread-1 (]: Spark adapter: NotImplemented: add_begin_query
+[0m15:07:13.538384 [debug] [Thread-1 (]: Using databricks connection "model.fivetran_dbt.employees_transformed"
+[0m15:07:13.538606 [debug] [Thread-1 (]: On model.fivetran_dbt.employees_transformed: /* {"app": "dbt", "dbt_version": "1.5.11", "dbt_databricks_version": "1.5.3", "databricks_sql_connector_version": "2.5.2", "profile_name": "fivetran_transformations", "target_name": "dev", "node_id": "model.fivetran_dbt.employees_transformed"} */
+create or replace view `hive_metastore`.`fivetranpocsample`.`employees_transformed`
+  
+  
+  as
+    
+
+SELECT 
+    CAST(EmpID as bigint) as employee_id,
+    UPPER(FirstName) as first_name,
+    UPPER(LastName) as last_name,
+    INITCAP(Department) as department,
+    CAST(Salary as double) as salary,
+    DATE_TRUNC('month', HireDate) as hire_date
+FROM `spark_catalog`.`dbo`.`employees`
+
+[0m15:07:13.538876 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:07:17.142477 [debug] [Thread-1 (]: SQL status: OK in 3.5999999046325684 seconds
+[0m15:07:17.159008 [debug] [Thread-1 (]: Timing info for model.fivetran_dbt.employees_transformed (execute): 15:07:13.511638 => 15:07:17.158768
+[0m15:07:17.159442 [debug] [Thread-1 (]: On model.fivetran_dbt.employees_transformed: ROLLBACK
+[0m15:07:17.159746 [debug] [Thread-1 (]: Databricks adapter: NotImplemented: rollback
+[0m15:07:17.160013 [debug] [Thread-1 (]: On model.fivetran_dbt.employees_transformed: Close
+[0m15:07:18.078646 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dfffb9a6-2c74-4454-848a-4fc56ca3f42c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1378b21d0>]}
+[0m15:07:18.080706 [info ] [Thread-1 (]: 1 of 1 OK created sql view model fivetranpocsample.employees_transformed ....... [[32mOK[0m in 4.58s]
+[0m15:07:18.082453 [debug] [Thread-1 (]: Finished running node model.fivetran_dbt.employees_transformed
+[0m15:07:18.085610 [debug] [MainThread]: On master: ROLLBACK
+[0m15:07:18.086113 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:07:19.209613 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m15:07:19.210971 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m15:07:19.211581 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m15:07:19.212178 [debug] [MainThread]: On master: ROLLBACK
+[0m15:07:19.212666 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m15:07:19.213168 [debug] [MainThread]: On master: Close
+[0m15:07:20.231332 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:07:20.232394 [debug] [MainThread]: Connection 'model.fivetran_dbt.employees_transformed' was properly closed.
+[0m15:07:20.235845 [info ] [MainThread]: 
+[0m15:07:20.236822 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 20.06 seconds (20.06s).
+[0m15:07:20.238316 [debug] [MainThread]: Command end result
+[0m15:07:20.251802 [info ] [MainThread]: 
+[0m15:07:20.252399 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:07:20.252910 [info ] [MainThread]: 
+[0m15:07:20.253281 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:07:20.253933 [debug] [MainThread]: Command `dbt run` succeeded at 15:07:20.253773 after 20.92 seconds
+[0m15:07:20.254522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10446ecd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104394610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103544650>]}
+[0m15:07:20.254943 [debug] [MainThread]: Flushing usage events
